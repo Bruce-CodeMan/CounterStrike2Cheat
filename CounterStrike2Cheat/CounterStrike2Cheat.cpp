@@ -1,7 +1,15 @@
 ﻿#include <iostream>
 #include <Windows.h>
 
+#include "GameWindow.h"
+#include "ExternalWindow.h"
+
 using namespace std;
+
+void Init() 
+{
+    gameWindow.Initialize();
+}
 
 int main()
 {
@@ -13,6 +21,8 @@ int main()
     MoveWindow(console, r.left, r.right, 500, 700, TRUE);
     cout << "Bruce Compiler" << endl;
     cout << "\n[*] waiting for cs2..." << endl;
+
+    CreateExternalWindow();
 }
 
 
